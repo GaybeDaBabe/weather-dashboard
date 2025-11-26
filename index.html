@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <h1>Weather Dashboard</h1>
+        <p>Check current conditions and a 5-day forecast by city.</p>
+      </header>
+
+      <main class="app-main">
+        <aside class="sidebar">
+          <section class="panel">
+            <h2>Search City</h2>
+            <form id="search-form">
+              <label for="city-input">City name</label>
+              <div class="search-row">
+                <input
+                  type="text"
+                  id="city-input"
+                  name="city"
+                  placeholder="e.g. Indianapolis"
+                  required
+                />
+                <button type="submit">Get Weather</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel">
+            <h2>Recent Searches</h2>
+            <ul id="history-list" class="history-list">
+              <!-- Filled by JavaScript -->
+            </ul>
+          </section>
+        </aside>
+
+        <section class="content">
+          <section id="current-weather" class="card">
+            <h2>Current Weather</h2>
+            <div id="current-weather-body" class="card-body">
+              <p class="muted">Search for a city to see the weather.</p>
+            </div>
+          </section>
+
+          <section id="forecast" class="card">
+            <h2>5-Day Forecast</h2>
+            <div id="forecast-grid" class="forecast-grid">
+              <!-- Filled by JavaScript -->
+            </div>
+          </section>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <p>
+          Data from
+          <a href="https://openweathermap.org/" target="_blank" rel="noopener">
+            OpenWeatherMap
+          </a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
