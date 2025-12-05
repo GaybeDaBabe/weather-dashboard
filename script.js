@@ -46,7 +46,7 @@ async function getWeatherForCity(city) {
 
     renderCurrentWeather(current);
     renderForecast(forecast);
-    addCityToHistory(current.name); // use normalized name from API
+    addCityToHistory(current.name);
   } catch (error) {
     renderError(error.message);
   }
@@ -239,7 +239,7 @@ function saveHistory(cities) {
 function addCityToHistory(city) {
   const history = loadHistory();
 
-  // Avoid duplicates (case-insensitive)
+  // Avoid duplicates
   const exists = history.some(
     (c) => c.toLowerCase() === city.toLowerCase()
   );
